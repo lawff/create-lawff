@@ -172,8 +172,6 @@ async function init() {
   // determine template
   template = `${framework.name}-${variant}`
 
-  console.log(variant, framework, template)
-
   console.log(`\nScaffolding project in ${root}...`)
 
   const templateDir = path.resolve(
