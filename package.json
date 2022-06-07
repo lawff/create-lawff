@@ -1,11 +1,11 @@
 {
-  "name": "create-lawff",
-  "version": "0.0.1",
+  "name": "create-lawlietff",
+  "version": "0.0.2",
   "type": "module",
   "license": "MIT",
   "author": "lawliet",
   "bin": {
-    "create-lawff": "index.js",
+    "create-lawlietff": "index.js",
     "cla": "index.js"
   },
   "files": [
