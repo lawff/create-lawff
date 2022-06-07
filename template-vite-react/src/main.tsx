@@ -10,12 +10,12 @@ import './styles/main.css'
 import 'virtual:uno.css'
 
 const root = ReactDOM.createRoot(
-  document.getElementById('app') as HTMLElement
+  document.getElementById('app') as HTMLElement,
 )
 root.render(
   <React.StrictMode>
     <Router>
       <App />
     </Router>
-  </React.StrictMode>
+  </React.StrictMode>,
 )

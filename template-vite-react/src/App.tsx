@@ -7,16 +7,16 @@ import NPLoading from '~/modules/nprogress'
 import Header from '~/components/Header'
 
 const App = () => {
-
   // TODO: 初始化时候 colorSchema
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light')
 
   const toggleColorScheme = (value?: ColorScheme) => {
-    if (value === 'dark' || colorScheme === 'light') {
+    if (value === 'dark' || colorScheme === 'light')
       document.documentElement.classList.add('dark')
-    } else {
+
+    else
       document.documentElement.classList.remove('dark')
-    }
+
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
   }
 
