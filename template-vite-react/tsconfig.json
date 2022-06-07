@@ -14,7 +14,7 @@
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
     "jsx": "react-jsx",
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noUnusedLocals": true,

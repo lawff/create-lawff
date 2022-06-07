@@ -1,3 +1,6 @@
 {
-  "extends": "@lawlietff"
+  "extends": "@lawlietff",
+  "rules": {
+    "react/jsx-no-undef": "off"
+  }
 }
