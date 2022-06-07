@@ -26,6 +26,7 @@
     "@types/nprogress": "^0.2.0",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
+    "@unocss/preset-attributify": "^0.38.1",
     "@unocss/reset": "^0.38.1",
     "@vitejs/plugin-react": "^1.3.2",
     "eslint": "^8.17.0",
