@@ -1,6 +1,6 @@
 # create-lawlietff
 
-## template width react & vite
+## template with vite
 
 > **Compatibility Note:**
 > Vite requires [Node.js](https://nodejs.org/en/) version >=14.6.0. However, some templates require a higher Node.js version to work, please upgrade if your package manager warns about it.
