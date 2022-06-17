@@ -4,9 +4,19 @@
   "type": "module",
   "license": "MIT",
   "author": "lawliet",
+  "description": "template with vite / react",
+  "keywords": [
+    "template",
+    "vite",
+    "react",
+    "vitesse"
+  ],
   "bin": {
     "create-lawlietff": "index.js",
-    "cla": "index.js"
+    "clff": "index.js"
+  },
+  "scripts": {
+    "release": "bumpp --commit --push --tag"
   },
   "files": [
     "index.js",
@@ -16,9 +26,21 @@
   "engines": {
     "node": ">=14.6.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lawff/create-lawff",
+    "directory": "lawff/create-lawff"
+  },
+  "bugs": {
+    "url": "https://github.com/lawff/create-lawff/issues"
+  },
+  "homepage": "https://github.com/lawff/create-lawff#readme",
   "dependencies": {
     "kolorist": "^1.5.1",
     "minimist": "^1.2.6",
     "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "bumpp": "^8.2.0"
   }
 }

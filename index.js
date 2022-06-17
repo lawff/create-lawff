@@ -48,7 +48,7 @@ const FRAMEWORKS = templates.filter(t => t.includes('template')).map((temp, i) =
     color: colors[i % 8],
     variants: [
       {
-        name: tempName[2],
+        name: tempName.slice(1).join('-'),
         color: colors[i % 8]
       },
     ]
@@ -58,6 +58,8 @@ const FRAMEWORKS = templates.filter(t => t.includes('template')).map((temp, i) =
 const TEMPLATES = FRAMEWORKS.map(
   (f) => (f.variants && f.variants.map((v) => v.name)) || [f.name]
 ).reduce((a, b) => a.concat(b), [])
+
+console.log(TEMPLATES)
 
 const renameFiles = {
   _gitignore: '.gitignore'
@@ -115,13 +117,13 @@ async function init() {
         },
         {
           type: template && TEMPLATES.includes(template) ? null : 'select',
-          name: 'framework',
+          name: 'tool',
           message:
             typeof template === 'string' && !TEMPLATES.includes(template)
               ? reset(
                   `"${template}" isn't a valid template. Please choose from below: `
                 )
-              : reset('Select a framework:'),
+              : reset('Select a tool:'),
           initial: 0,
           choices: FRAMEWORKS.map((framework) => {
             const frameworkColor = framework.color
@@ -132,13 +134,13 @@ async function init() {
           })
         },
         {
-          type: (framework) =>
-            framework && framework.variants ? 'select' : null,
+          type: (tool) =>
+            tool && tool.variants ? 'select' : null,
           name: 'variant',
           message: reset('Select a variant:'),
           // @ts-ignore
-          choices: (framework) =>
-            framework.variants.map((variant) => {
+          choices: (tool) =>
+            tool.variants.map((variant) => {
               const variantColor = variant.color
               return {
                 title: variantColor(variant.name),
@@ -159,7 +161,7 @@ async function init() {
   }
 
   // user choice associated with prompts
-  const { framework, overwrite, packageName, variant } = result
+  const { overwrite, packageName, variant } = result
 
   const root = path.join(cwd, targetDir)
 
@@ -170,9 +172,7 @@ async function init() {
   }
 
   // determine template
-  template = `${framework.name}-${variant}`
-
-  console.log(variant, framework, template)
+  template = variant || template
 
   console.log(`\nScaffolding project in ${root}...`)
 
