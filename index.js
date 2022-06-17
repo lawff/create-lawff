@@ -39,19 +39,20 @@ const templateDir = path.resolve(
   '..'
 )
 
-const templates = fs.readdirSync(templateDir)
+const templates = fs.readdirSync(templateDir).filter(t => t.includes('template'))
 
-const FRAMEWORKS = templates.filter(t => t.includes('template')).map((temp, i) => {
-  const tempName = temp.split('-')
+const tools = [...new Set(templates.map(t => t.split('-')[1]))]
+
+const FRAMEWORKS = tools.map((tool, i) => {
   return {
-    name: tempName[1],
+    name: tool,
     color: colors[i % 8],
-    variants: [
-      {
-        name: tempName.slice(1).join('-'),
-        color: colors[i % 8]
-      },
-    ]
+    variants: templates.filter(t => t.split('-')[1] === tool).map((t, j) => {
+      return {
+        name: t.split('-').slice(1).join('-'),
+        color: colors[j % 8],
+      }
+    })
   }
 })
 

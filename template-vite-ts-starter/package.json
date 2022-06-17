@@ -33,7 +33,7 @@
     "lint": "eslint .",
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
-    "start": "esno src/index.ts",
+    "dev": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
