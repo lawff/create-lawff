@@ -59,8 +59,6 @@ const TEMPLATES = FRAMEWORKS.map(
   (f) => (f.variants && f.variants.map((v) => v.name)) || [f.name]
 ).reduce((a, b) => a.concat(b), [])
 
-console.log(TEMPLATES)
-
 const renameFiles = {
   _gitignore: '.gitignore'
 }

@@ -14,7 +14,7 @@
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
     "jsx": "react-jsx",
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noUnusedLocals": true,
@@ -25,7 +25,7 @@
     "types": [
       "vitest",
       "vite/client",
-      "vite-plugin-pages/client"
+      "vite-plugin-pages/client-react"
     ],
     "paths": {
       "~/*": ["src/*"]

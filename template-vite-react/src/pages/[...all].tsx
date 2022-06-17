@@ -1,7 +1,6 @@
 import { Button, Center } from '@mantine/core'
 
 function NotMatch() {
-  
   const navigate = useNavigate()
 
   return (
@@ -11,12 +10,12 @@ function NotMatch() {
           <div className="i-carbon-warning inline-block" />
         </div>
         <p className="text-3xl">404 | Not found</p>
-        <Button className="m-3" onClick={() => {navigate(-1)}}>
+        <Button className="m-3" onClick={() => { navigate(-1) }}>
           返回
         </Button>
       </main>
     </Center>
-  );
+  )
 }
 
 export default NotMatch

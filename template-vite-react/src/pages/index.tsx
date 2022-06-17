@@ -1,12 +1,11 @@
-import { Input, Button } from '@mantine/core'
+import { Button, Input } from '@mantine/core'
 
 function Home() {
-
   const navigate = useNavigate()
   const [name, setName] = useState('')
 
   return (
-    
+
     <>
       <main className="px-4 py-10 ml-20 text-gray-700 dark:text-gray-200">
         <div className="text-4xl">
@@ -32,7 +31,7 @@ function Home() {
         </Button>
       </main>
     </>
-  );
+  )
 }
 
 export default Home
